@@ -1,0 +1,27 @@
+Docker container that executes winbox (Mikrotik RouterOS configurator)
+on Wine inside Debian Wheezy.
+
+Image installation
+------------------
+
+$ docker build -t zanardo/winbox github.com/zanardo/docker-winbox
+
+
+Host dependencies
+-----------------
+
+# aptitude install sshpass openssh-client
+# wget -o /usr/local/bin/winbox.sh \
+    https://raw.githubusercontent.com/zanardo/docker-winbox/master/winbox.sh
+
+The X11 server on host must listen on TCP, for SSH X11 forwarding to work.
+
+
+Running the container
+---------------------
+
+$ winbox.sh
+
+A container named `winbox' will be created, showing winbox GUI on the host
+machine. After winbox is closed, the container will be stopped instead of
+destroyed so Wine configuration (and winbox downloaded DLLs) can persist.
