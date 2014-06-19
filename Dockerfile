@@ -17,5 +17,6 @@ RUN wget -q -O /winbox.exe http://download2.mikrotik.com/winbox.exe
 RUN mkdir /var/run/sshd
 
 EXPOSE 22
+VOLUME ["/home/winbox"]
 
 CMD ["/usr/sbin/sshd", "-D"]
