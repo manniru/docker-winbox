@@ -23,6 +23,6 @@ Running the container
 
 $ winbox.sh
 
-A container named `winbox' will be created, showing winbox GUI on the host
-machine. After winbox is closed, the container will be stopped instead of
-destroyed so Wine configuration (and winbox downloaded DLLs) can persist.
+A container will be created, showing winbox GUI on the host machine. After
+winbox is closed, the container will be destroyed, but Wine configurations and
+winbox downloaded DLLs will persist on host $HOME/.docker-winbox.
