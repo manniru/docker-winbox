@@ -11,8 +11,9 @@ Host dependencies
 -----------------
 
 # aptitude install sshpass openssh-client
-# wget -o /usr/local/bin/winbox.sh \
+# wget -O /usr/local/bin/winbox.sh \
     https://raw.githubusercontent.com/zanardo/docker-winbox/master/winbox.sh
+# chmod 755 /usr/local/bin/winbox.sh
 
 The X11 server on host must listen on TCP, for SSH X11 forwarding to work.
 
